@@ -8,6 +8,7 @@
 </head>
 <body>
 
+	<jsp:include page="Barra.jsp"/>
 	<h1>USUARIO</h1>
 
 </body>

@@ -7,7 +7,8 @@
 <title>Admin</title>
 </head>
 <body>
-
+	
+	<jsp:include page="Barra.jsp"/>
 	<h1>ADMIN</h1>
 
 </body>

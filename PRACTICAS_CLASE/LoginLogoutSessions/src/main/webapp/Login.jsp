@@ -11,14 +11,31 @@
 </head>
 <body>
 	
-	<a href="#" style="padding:30px">ENTRAR EN SESIÓN</a><br>
-	<form method="post" style="padding:30px">
-		<label class="form-label">Usuario: </label><br>
-		<input type="text" name="user" required class="form-control"><br>
-		<label class="form-label">Password: </label><br>
-		<input type="password" name="pass" required class="form-control"><br><br>
-		<input type="submit" value="Inciar Sesión" class="btn btn-primary">
-	</form>
-
+	<a href="#" style="padding:30px" data-bs-toggle="modal" data-bs-target="#loginModal">ENTRAR EN SESIÓN</a><br>
+	
+	<div class="modal fade" id="loginModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					
+					<form method="post" style="padding:30px">
+						<label class="form-label">Usuario: </label><br>
+						<input type="text" name="user" required class="form-control"><br>
+						<label class="form-label">Password: </label><br>
+						<input type="password" name="pass" required class="form-control"><br><br>
+						<input type="submit" value="Inciar Sesión" class="btn btn-primary">
+					</form>
+					
+				</div>				
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>
