@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="HolaMUndo" path="/HolaMUndo" reloadable="true" source="org.eclipse.jst.jee.server:HolaMUndo"/><Context docBase="HolaMundo2" path="/HolaMundo2" reloadable="true" source="org.eclipse.jst.jee.server:HolaMundo2"/><Context docBase="HolaMundoSinD" path="/HolaMundoSinD" reloadable="true" source="org.eclipse.jst.jee.server:HolaMundoSinD"/><Context docBase="HolaMundoConD" path="/HolaMundoConD" reloadable="true" source="org.eclipse.jst.jee.server:HolaMundoConD"/><Context docBase="EjemploGet" path="/EjemploGet" reloadable="true" source="org.eclipse.jst.jee.server:EjemploGet"/><Context docBase="EjemploPost" path="/EjemploPost" reloadable="true" source="org.eclipse.jst.jee.server:EjemploPost"/><Context docBase="LoginPost" path="/LoginPost" reloadable="true" source="org.eclipse.jst.jee.server:LoginPost"/></Host>
+      <Context docBase="Sesiones" path="/Sesiones" reloadable="true" source="org.eclipse.jst.jee.server:Sesiones"/><Context docBase="LoginSesion" path="/LoginSesion" reloadable="true" source="org.eclipse.jst.jee.server:LoginSesion"/><Context docBase="RedirectServletJSP" path="/RedirectServletJSP" reloadable="true" source="org.eclipse.jst.jee.server:RedirectServletJSP"/><Context docBase="LoginLogoutSessionsCookies" path="/LoginLogoutSessionsCookies" reloadable="true" source="org.eclipse.jst.jee.server:LoginLogoutSessionsCookies"/></Host>
     </Engine>
   </Service>
 </Server>

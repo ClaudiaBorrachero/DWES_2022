@@ -34,18 +34,30 @@ public class LoginPost extends HttpServlet {
 		// Muestro un formulario para recoger nombre y apellidos del usuario
 		PrintWriter out = response.getWriter();
 
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html");
+		
+		String user = request.getParameter("user");
+		String pass = request.getParameter("pass");
+		
 		out.println("<html>");
 		out.println("<head><title>Login</title><head>");
 		out.println("<body>");
 		out.println("<h1>Formulario de inicio de sesión</h1>");
+				
+		if (request.getAttribute("error")!=null  && ((boolean)request.getAttribute("error"))) {
+			out.println("<p style=color:red>Datos erróneos</p>");
+		}
 
 		out.println("<form method=\"post\">");
-		out.println("<label for=\"user\">Usuario:</label><input id=\"user\" type=\"text\" name=\"user\"><br><br>");
+		out.println("<label for=\"user\">Usuario:</label><input id=\"user\" type=\"text\" name=\"user\" required><br><br>");
 		out.println(
-				"<label for=\"pass\">Password:</label><input id=\"pass\" type=\"password\" name=\"pass\"><br><br>");
+				"<label for=\"pass\">Password:</label><input id=\"pass\" type=\"password\" name=\"pass\" required><br><br>");
 		out.println("<button type=\"submit\" name=\"submit\">Iniciar Sesión</button>");
 		out.println("</form>");
 		out.println("</body></html>");
+		
+		out.close();
 
 	}
 
@@ -56,30 +68,24 @@ public class LoginPost extends HttpServlet {
 			throws ServletException, IOException {
 
 		PrintWriter out = response.getWriter();
-		Enumeration paramEnumeration = request.getParameterNames();
 
-		if (!paramEnumeration.hasMoreElements()) {
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html");
 
-			// No hay parámetros en la petición
-			out.println("Estoy en una petición post y no he recibido parámetros");
-			
-		} else {
-
-			// Comienzo de la lista de parámetros
-			out.println("<h1>Formulario de inicio de Sesión</h1>");
-			out.println("<ul>");
+		// Comienzo de la lista de parámetros
+		out.println("<ul>");
 					
-				String user = request.getParameter("user");
-				String pass = request.getParameter("pass");
-				
-				out.write("User: " + user + "<br>");
-				out.write("Pass: " + pass);				
-				
-				if (user.equals("admin")  && pass.equals("admin")) {
-					out.write("<h2>Bienvenido ADMIN</h2>");
-				} else {
-					out.write("<h2>No eres admin</h2>");
-					out.write("<input type=\"button\" onclick=\"history.back()\" name=\"volver atrás\" value=\"Volver atrás\">");
+			String user = request.getParameter("user");
+			String pass = request.getParameter("pass");
+			
+//			out.write("User: " + user + "<br>");
+//			out.write("Pass: " + pass);				
+			
+			if (user.equals("admin")  && pass.equals("admin")) {
+				out.write("<h2>Bienvenido ADMIN</h2>");
+			} else {
+				request.setAttribute("error", true);
+				doGet(request,response);
 				}
 
 //				while (paramEnumeration.hasMoreElements()) {
@@ -95,8 +101,8 @@ public class LoginPost extends HttpServlet {
 								
 			// Fin de la lista de parámetros
 			out.println("</ul>");
-
+			
+			out.close();
 		}
+        
 	}
-
-}
