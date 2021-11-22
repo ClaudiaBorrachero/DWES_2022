@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Entregable3B</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <session-config> 
+  	<session-timeout>5</session-timeout> 
+  </session-config>
+  
+  <servlet>
+    <servlet-name>InicioServlet</servlet-name>
+    <servlet-class>org.alixar.servidor.cnbm.controller.InicioServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>OficinaServlet</servlet-name>
+  	<servlet-class>org.alixar.servidor.cnbm.controller.OficinaServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>AdminInicioServlet</servlet-name>
+  	<servlet-class>org.alixar.servidor.cnbm.controller.AdminInicioServlet</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<servlet-name>UpdateProduct</servlet-name>
+  	<servlet-class>org.alixar.servidor.cnbm.controller.UpdateProduct</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>org.iesalixar.servidor.controller.RegisterServlet</servlet-class>
+  </servlet>
+  
+   <servlet>
+  	<servlet-name>DatosUsuario</servlet-name>
+  	<servlet-class>org.iesalixar.servidor.controller.DatosUsuario</servlet-class>
+  </servlet>
+    <servlet-mapping>
+  	<servlet-name>DatosUsuario</servlet-name>
+  	<url-pattern>/DatosUsuario</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<servlet-class>org.alixar.servidor.cnbm.controller.LogOutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>InicioServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>OficinaServlet</servlet-name>
+  	<url-pattern>/OficinaServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>AdminInicioServlet</servlet-name>
+  	<url-pattern>/Admin/Inicio</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  	<servlet-name>UpdateProduct</servlet-name>
+  	<url-pattern>/Admin/UpdateProduct</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>LogOutServlet</servlet-name>
+  	<url-pattern>/LogOutServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/img/*</url-pattern>
+    <url-pattern>/css/*</url-pattern>
+    <url-pattern>/js/*</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+		<filter-name>AdminFilter</filter-name>
+		<filter-class>org.iesalixar.servidor.filters.AdminFilter</filter-class>		
+	</filter>
+	
+	<filter>
+		<filter-name>UserFilter</filter-name>
+		<filter-class>org.iesalixar.servidor.filters.UserFilter</filter-class>		
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>AdminFilter</filter-name>
+		<servlet-name>UpdateProduct</servlet-name>
+		<servlet-name>AdminInicioServlet</servlet-name>		
+	</filter-mapping>	
+  
+<!--   <filter-mapping>
+  	<filter-name>UserFilter</filter-name>
+  	<url-pattern>/Search</url-pattern>
+  </filter-mapping> -->
+  
+</web-app>
