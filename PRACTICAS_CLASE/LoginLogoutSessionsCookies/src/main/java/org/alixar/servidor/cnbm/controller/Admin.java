@@ -43,6 +43,7 @@ public class Admin extends HttpServlet {
 				request.setAttribute("usuarioBean", usuario);
 				request.getRequestDispatcher("Admin.jsp").forward(request, response);
 			
+				return;
 			}
 		}
 		

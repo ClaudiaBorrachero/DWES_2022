@@ -36,8 +36,9 @@ public class ServletProp extends HttpServlet {
 		InputStream is = null;
 		
 		try {
-			is = new FileInputStream("resources/bd.properties");
-			prop.load(is);
+//			is = new FileInputStream("resources/bd.properties");
+			prop.load(getClass().getClassLoader().getResourceAsStream("bd.properties"));
+//			prop.load(is);
 			
 		} catch(Exception e) {
 			System.out.println(e.getMessage());

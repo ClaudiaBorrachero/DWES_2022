@@ -43,6 +43,7 @@ public class Usuario extends HttpServlet {
 				request.setAttribute("usuarioBean", usuario);				
 				request.getRequestDispatcher("Usuario.jsp").forward(request, response);
 				
+				return;
 			}
 			
 		} 
