@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>EstudioExamen</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.RegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DatosUsuario</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.DatosUsuario</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UpdatePassword</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.UpdatePassword</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AdminMainServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.AdminMainServlet</servlet-class>
+	</servlet>
+
+ 	<servlet>
+		<servlet-name>Customers</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.Customers</servlet-class>
+	</servlet> 
+
+	<servlet>
+		<servlet-name>Payments</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.Payments</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Employees</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.Employees</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Offices</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.Offices</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>EmployeeOffice</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.EmployeeOffice</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Products</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.Products</servlet-class>
+	</servlet>
+
+ 	<servlet>
+		<servlet-name>ProductsDetails</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.ProductsDetails</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddPayment</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.AddPayment</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>UpdatePayment</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.UpdatePayment</servlet-class>
+	</servlet>
+	
+ 	<servlet>
+		<servlet-name>DeletePayment</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.DeletePayment</servlet-class>
+	</servlet> 
+	
+	<servlet>
+		<servlet-name>Usuarios</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.Usuarios</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Orders</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.Orders</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>OrderDetails</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.OrderDetails</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SearchProductServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.SearchProductServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LogOutServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.LogOutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DatosUsuario</servlet-name>
+		<url-pattern>/DatosUsuario</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdatePassword</servlet-name>
+		<url-pattern>/UpdatePassword</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AdminMainServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/</url-pattern>
+	</servlet-mapping>
+
+ 	<servlet-mapping>
+		<servlet-name>Customers</servlet-name>
+		<url-pattern>/AdminMainServlet/Customers</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Payments</servlet-name>
+		<url-pattern>/AdminMainServlet/Payments</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AddPayment</servlet-name>
+		<url-pattern>/AdminMainServlet/AddPayment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>UpdatePayment</servlet-name>
+		<url-pattern>/AdminMainServlet/UpdatePayment</url-pattern>
+	</servlet-mapping>
+
+ 	<servlet-mapping>
+		<servlet-name>DeletePayment</servlet-name>
+		<url-pattern>/AdminMainServlet/DeletePayment</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Employees</servlet-name>
+		<url-pattern>/AdminMainServlet/Employees</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Offices</servlet-name>
+		<url-pattern>/AdminMainServlet/Offices</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EmployeeOffice</servlet-name>
+		<url-pattern>/AdminMainServlet/EmployeeOffice</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Products</servlet-name>
+		<url-pattern>/AdminMainServlet/Products</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProductsDetails</servlet-name>
+		<url-pattern>/AdminMainServlet/ProductsDetails</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Usuarios</servlet-name>
+		<url-pattern>/AdminMainServlet/Usuarios</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Orders</servlet-name>
+		<url-pattern>/AdminMainServlet/Orders</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>OrderDetails</servlet-name>
+		<url-pattern>/AdminMainServlet/OrderDetails</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SearchProductServlet</servlet-name>
+		<url-pattern>/SearchProductServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LogOutServlet</servlet-name>
+		<url-pattern>/LogOutServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- <servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/img/*</url-pattern>
+		<url-pattern>/css/*</url-pattern>
+		<url-pattern>/js/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>AdminFilter</filter-name>
+		<filter-class>org.alixar.servidor.filters.AdminFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>UserFilter</filter-name>
+		<filter-class>org.alixar.servidor.filters.UserFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>AdminFilter</filter-name>
+		<servlet-name>Payments</servlet-name>
+		<servlet-name>UpdatePayment</servlet-name> <servlet-name>AddPayment</servlet-name>
+		<servlet-name>AdminMainServlet</servlet-name>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>UserFilter</filter-name>
+		<url-pattern>/SearchProductServlet</url-pattern>
+	</filter-mapping> -->
+
+</web-app>
