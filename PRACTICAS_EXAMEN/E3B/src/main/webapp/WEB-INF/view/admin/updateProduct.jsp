@@ -21,11 +21,11 @@
 								
 					<h2 class="text-center"><b>MODIFICAR DATOS</b></h2>
 					<label for="productCode" class="form-label mt-3">Código</label>
-    				<input value="${ product.productCode }" type="text" class="form-control" id="productCode" name="productCode" required disabled>	
+    				<input value="${ sessionScope.product.productCode }" type="text" class="form-control" id="productCode" name="productCode" required disabled>	
     				<label for="productName" class="form-label mt-3">Nombre</label>
-    				<input value="${ product.productName }" type="text" class="form-control" id="productName" name="productName" required disabled>
+    				<input value="${ sessionScope.product.productName }" type="text" class="form-control" id="productName" name="productName" required disabled>
     				<label for="productLine" class="form-label mt-3">Categoría</label>
-    				<input value="${ product.productLine }" type="text" class="form-control" id="productLine" name="productLine" required disabled>
+    				<input value="${ sessionScope.product.productLine }" type="text" class="form-control" id="productLine" name="productLine" required disabled>
     				<label for="productScale" class="form-label mt-3">Escala</label>
     				<input value="${ product.productScale }" type="text" class="form-control" id="productScale" name="productScale" required disabled>
     				<label for="productVendor" class="form-label mt-3">Vendedor</label>
