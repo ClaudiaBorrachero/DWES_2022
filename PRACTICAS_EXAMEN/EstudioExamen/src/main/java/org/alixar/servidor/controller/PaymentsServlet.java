@@ -4,23 +4,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.alixar.servidor.dao.DAOOfficesImpl;
+import org.alixar.servidor.dao.DAOPaymentsImpl;
 
 /**
- * Servlet implementation class Offices
+ * Servlet implementation class Payments
  */
-//@WebServlet("/Offices")
-public class Offices extends HttpServlet {
+//@WebServlet("/Payments")
+public class PaymentsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Offices() {
+    public PaymentsServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,13 +31,13 @@ public class Offices extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		DAOOfficesImpl daoImpl = new DAOOfficesImpl();
+		DAOPaymentsImpl daoImpl = new DAOPaymentsImpl();
 
-		ArrayList<Offices> listaOficinas = (ArrayList) daoImpl.getAllOficinas();
+		ArrayList<PaymentsServlet> listaPagos = (ArrayList) daoImpl.getAllPayments();
 
-		request.setAttribute("oficinas", listaOficinas);
+		request.setAttribute("pagos", listaPagos);
 
-		request.getRequestDispatcher("/WEB-INF/view/admin/offices.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/admin/payments.jsp").forward(request, response);
 		
 	}
 

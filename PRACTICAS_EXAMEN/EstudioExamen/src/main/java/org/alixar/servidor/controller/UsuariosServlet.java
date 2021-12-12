@@ -16,13 +16,13 @@ import org.alixar.servidor.dao.DAOUsuariosImpl;
  * Servlet implementation class Usuarios
  */
 //@WebServlet("/Usuarios")
-public class Usuarios extends HttpServlet {
+public class UsuariosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Usuarios() {
+    public UsuariosServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,7 +34,7 @@ public class Usuarios extends HttpServlet {
 		
 		DAOUsuariosImpl daoImpl = new DAOUsuariosImpl();
 
-		ArrayList<Usuarios> listaUsuarios = (ArrayList) daoImpl.getAllUsuarios();
+		ArrayList<UsuariosServlet> listaUsuarios = (ArrayList) daoImpl.getAllUsuarios();
 
 		request.setAttribute("usuarios", listaUsuarios);
 

@@ -77,8 +77,8 @@ public class DAOProductsImpl implements DAOProducts {
 
 				product = new Products();
 
-				product.setProductName(rs.getString("productCode"));
-				product.setProductCode(rs.getString("productName"));
+				product.setProductCode(rs.getString("productCode"));
+				product.setProductName(rs.getString("productName"));
 				product.setProductLine(rs.getString("productLine"));
 				product.setProductScale(rs.getNString("productScale"));
 				product.setProductVendor(rs.getString("productVendor"));
@@ -220,8 +220,8 @@ public class DAOProductsImpl implements DAOProducts {
 			while (rs.next()) {
 
 				product = new Products();
-				product.setProductName(rs.getString("productName"));
 				product.setProductCode(rs.getString("productCode"));
+				product.setProductName(rs.getString("productName"));
 				product.setProductLine(rs.getString("productLine"));
 				product.setProductScale(rs.getString("productScale"));
 				product.setProductVendor(rs.getString("productVendor"));
@@ -231,14 +231,14 @@ public class DAOProductsImpl implements DAOProducts {
 				product.setMSRP(rs.getDouble("MSRP"));
 
 			}
-
+			
 		} catch (SQLException ex) {
 			System.out.println(ex.getMessage());
-		} finally {
+		}  finally {
 			try {
 				con.close();
-			} catch (SQLException ex){
-				System.out.println(ex.getMessage());
+			} catch (SQLException ex) {
+				ex.printStackTrace();
 			}
 		}
 

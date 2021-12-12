@@ -1,27 +1,26 @@
 package org.alixar.servidor.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.alixar.servidor.dao.DAOProductsImpl;
+import org.alixar.servidor.dao.DAOOrdersImpl;
+import org.alixar.servidor.model.Orders;
 
 /**
- * Servlet implementation class Products
+ * Servlet implementation class OrderDetails
  */
-//@WebServlet("/Products")
-public class Products extends HttpServlet {
+//@WebServlet("/OrderDetails")
+public class OrderDetailsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Products() {
+    public OrderDetailsServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,13 +30,16 @@ public class Products extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		DAOProductsImpl daoImpl = new DAOProductsImpl();
-
-		ArrayList<Products> listaProducts = (ArrayList) daoImpl.getAllProducts();
-
-		request.setAttribute("products", listaProducts);
-
-		request.getRequestDispatcher("/WEB-INF/view/admin/products.jsp").forward(request, response);
+		String orderNumber = request.getParameter("orderNumber");
+		
+		DAOOrdersImpl dao = new DAOOrdersImpl();
+		
+		if (orderNumber!=null) {
+			Orders order = dao.getOrder(Integer.parseInt(orderNumber));
+			request.setAttribute("detalle", order);
+		}
+		 
+		request.getRequestDispatcher("/WEB-INF/view/admin/orderDetails.jsp").forward(request, response);
 		
 	}
 

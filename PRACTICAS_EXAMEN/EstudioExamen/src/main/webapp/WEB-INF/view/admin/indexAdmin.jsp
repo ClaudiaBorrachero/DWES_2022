@@ -17,25 +17,25 @@
 	
 	<div class="row justify-content-center mt-4 text-center">
 		<div class="col-4 p-3">
-			<a href="Payments" class="btn btn-primary">Payments</a>			
+			<a href="PaymentsServlet" class="btn btn-primary">Payments</a>			
 		</div>
 		<div class="col-4 p-3">
-			<a href="Customers" class="btn btn-primary">Customers</a>			
+			<a href="CustomersServlet" class="btn btn-primary">Customers</a>			
 		</div>
 		<div class="col-4 p-3">
-			<a href="Employees" class="btn btn-primary">Employees</a>			
+			<a href="EmployeesServlet" class="btn btn-primary">Employees</a>			
 		</div>
 		<div class="col-4 p-3">
-			<a href="Offices" class="btn btn-primary">Offices</a>			
+			<a href="OfficesServlet" class="btn btn-primary">Offices</a>			
 		</div>
 		<div class="col-4 p-3">
-			<a href="Products" class="btn btn-primary">Products</a>			
+			<a href="ProductsServlet" class="btn btn-primary">Products</a>			
 		</div>
 		<div class="col-4 p-3">
-			<a href="Usuarios" class="btn btn-primary">Usuarios</a>			
+			<a href="UsuariosServlet" class="btn btn-primary">Usuarios</a>			
 		</div>
 		<div class="col-4 p-3">
-			<a href="Orders" class="btn btn-primary">Orders</a>			
+			<a href="OrdersServlet" class="btn btn-primary">Orders</a>			
 		</div>
 	</div>
 	

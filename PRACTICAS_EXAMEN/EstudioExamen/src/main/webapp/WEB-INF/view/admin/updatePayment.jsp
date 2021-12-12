@@ -10,10 +10,9 @@
 <title>Editar Pagos</title>
 </head>
 <body>
+	<jsp:include page="../include/barra.jsp"/>
 	<div class="container mt-5">
-	
-		<jsp:include page="../include/barra.jsp"/>
-	
+		<h2 class="text-center" style="color: navy"><b>MODIFICAR PAGOS</b></h2>	
 		<div class="row justify-content-center mt-3">
 			<div class="col-6">
 				<form method="post">

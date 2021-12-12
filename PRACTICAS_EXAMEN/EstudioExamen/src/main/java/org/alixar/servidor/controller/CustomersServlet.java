@@ -14,13 +14,13 @@ import org.alixar.servidor.dao.DAOCustomersImpl;
  * Servlet implementation class Customers
  */
 //@WebServlet("/Customers")
-public class Customers extends HttpServlet {
+public class CustomersServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Customers() {
+    public CustomersServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,7 +32,7 @@ public class Customers extends HttpServlet {
 		
 		DAOCustomersImpl daoImpl = new DAOCustomersImpl();
 
-		ArrayList<Customers> listaCustomers = (ArrayList) daoImpl.getAllCustomers();
+		ArrayList<CustomersServlet> listaCustomers = (ArrayList) daoImpl.getAllCustomers();
 
 		request.setAttribute("customer", listaCustomers);
 

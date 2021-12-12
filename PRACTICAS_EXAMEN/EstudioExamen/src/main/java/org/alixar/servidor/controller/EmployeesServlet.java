@@ -15,13 +15,13 @@ import org.alixar.servidor.dao.DAOEmployeesImpl;
  * Servlet implementation class Employees
  */
 //@WebServlet("/Employees")
-public class Employees extends HttpServlet {
+public class EmployeesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Employees() {
+    public EmployeesServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,7 +33,7 @@ public class Employees extends HttpServlet {
 		
 		DAOEmployeesImpl daoImpl = new DAOEmployeesImpl();
 
-		ArrayList<Customers> listaEmployees = (ArrayList) daoImpl.getAllEmployees();
+		ArrayList<CustomersServlet> listaEmployees = (ArrayList) daoImpl.getAllEmployees();
 
 		request.setAttribute("employee", listaEmployees);
 

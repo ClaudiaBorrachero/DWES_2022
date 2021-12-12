@@ -146,7 +146,6 @@ public class DAOPaymentsImpl implements DAOPayments{
 			statement.setInt(3, payment.getCustomerNumber());
 			statement.setString(4, payment.getCheckNumber());
 			
-
 			resultado = statement.executeUpdate();
 
 		} catch (SQLException ex) {

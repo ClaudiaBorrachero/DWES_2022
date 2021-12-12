@@ -14,13 +14,13 @@ import org.alixar.servidor.dao.DAOOrdersImpl;
  * Servlet implementation class Orders
  */
 //@WebServlet("/Orders")
-public class Orders extends HttpServlet {
+public class OrdersServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Orders() {
+    public OrdersServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,7 +32,7 @@ public class Orders extends HttpServlet {
 		
 		DAOOrdersImpl daoImpl = new DAOOrdersImpl();
 
-		ArrayList<Orders> listaOrders = (ArrayList) daoImpl.getAllOrders();
+		ArrayList<OrdersServlet> listaOrders = (ArrayList) daoImpl.getAllOrders();
 
 		request.setAttribute("orders", listaOrders);
 

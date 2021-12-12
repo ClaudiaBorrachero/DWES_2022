@@ -50,6 +50,7 @@ public class UpdatePayment extends HttpServlet {
 			
 			
 			request.getRequestDispatcher("/WEB-INF/view/admin/updatePayment.jsp").forward(request, response);
+			
 		} else {
 			response.sendRedirect("/AdminMainServlet/Payments");
 		}

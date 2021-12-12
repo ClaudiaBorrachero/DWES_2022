@@ -9,19 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.alixar.servidor.dao.DAOPaymentsImpl;
+import org.alixar.servidor.dao.DAOProductsImpl;
 
 /**
- * Servlet implementation class Payments
+ * Servlet implementation class Products
  */
-//@WebServlet("/Payments")
-public class Payments extends HttpServlet {
+//@WebServlet("/Products")
+public class ProductsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Payments() {
+    public ProductsServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,13 +31,13 @@ public class Payments extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		DAOPaymentsImpl daoImpl = new DAOPaymentsImpl();
+		DAOProductsImpl daoImpl = new DAOProductsImpl();
 
-		ArrayList<Payments> listaPagos = (ArrayList) daoImpl.getAllPayments();
+		ArrayList<ProductsServlet> listaProducts = (ArrayList) daoImpl.getAllProducts();
 
-		request.setAttribute("pagos", listaPagos);
+		request.setAttribute("products", listaProducts);
 
-		request.getRequestDispatcher("/WEB-INF/view/admin/payments.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/view/admin/products.jsp").forward(request, response);
 		
 	}
 

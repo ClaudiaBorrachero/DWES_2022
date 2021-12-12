@@ -12,7 +12,6 @@ import org.alixar.servidor.model.Products;
 
 public class DAOOrderDetailsImpl implements DAOOrderDetails {
 
-
 	@Override
 	public ArrayList<OrderDetails> getDetailsFromOrder(int orderNumber) {
 		
@@ -23,20 +22,19 @@ public class DAOOrderDetailsImpl implements DAOOrderDetails {
 
 		try {
 
-			String sql = "select * from orderdetails where  orderNumber = ?";
+			String sql = "select * from orderdetails where orderNumber = ?";
 			PoolDB pool = new PoolDB();
 			con = pool.getConnection();
 			PreparedStatement statement = con.prepareStatement(sql);
 			
 			statement.setInt(1, orderNumber);
-			
 
 			ResultSet rs = statement.executeQuery();
 
 			while (rs.next()) {
 
-				
 				od = new OrderDetails();
+				
 				od.setOrderLineNumber(rs.getInt("orderLineNumber"));
 				od.setPriceEach(rs.getDouble("priceEach"));
 				od.setQuantityOrdered(rs.getInt("quantityOrdered"));

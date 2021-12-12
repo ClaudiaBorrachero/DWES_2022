@@ -39,23 +39,23 @@
 	</servlet>
 
  	<servlet>
-		<servlet-name>Customers</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.Customers</servlet-class>
+		<servlet-name>CustomersServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.CustomersServlet</servlet-class>
 	</servlet> 
 
 	<servlet>
-		<servlet-name>Payments</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.Payments</servlet-class>
+		<servlet-name>PaymentsServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.PaymentsServlet</servlet-class>
 	</servlet>
 	
 	<servlet>
-		<servlet-name>Employees</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.Employees</servlet-class>
+		<servlet-name>EmployeesServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.EmployeesServlet</servlet-class>
 	</servlet>
 
 	<servlet>
-		<servlet-name>Offices</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.Offices</servlet-class>
+		<servlet-name>OfficesServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.OfficesServlet</servlet-class>
 	</servlet>
 	
 	<servlet>
@@ -64,8 +64,8 @@
 	</servlet>
 
 	<servlet>
-		<servlet-name>Products</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.Products</servlet-class>
+		<servlet-name>ProductsServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.ProductsServlet</servlet-class>
 	</servlet>
 
  	<servlet>
@@ -89,18 +89,18 @@
 	</servlet> 
 	
 	<servlet>
-		<servlet-name>Usuarios</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.Usuarios</servlet-class>
+		<servlet-name>UsuariosServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.UsuariosServlet</servlet-class>
 	</servlet>
 	
 	<servlet>
-		<servlet-name>Orders</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.Orders</servlet-class>
+		<servlet-name>OrdersServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.OrdersServlet</servlet-class>
 	</servlet>
 
 	<servlet>
-		<servlet-name>OrderDetails</servlet-name>
-		<servlet-class>org.alixar.servidor.controller.OrderDetails</servlet-class>
+		<servlet-name>OrderDetailsServlet</servlet-name>
+		<servlet-class>org.alixar.servidor.controller.OrderDetailsServlet</servlet-class>
 	</servlet>
 
 	<servlet>
@@ -139,13 +139,13 @@
 	</servlet-mapping>
 
  	<servlet-mapping>
-		<servlet-name>Customers</servlet-name>
-		<url-pattern>/AdminMainServlet/Customers</url-pattern>
+		<servlet-name>CustomersServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/CustomersServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>Payments</servlet-name>
-		<url-pattern>/AdminMainServlet/Payments</url-pattern>
+		<servlet-name>PaymentsServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/PaymentsServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
@@ -164,13 +164,13 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>Employees</servlet-name>
-		<url-pattern>/AdminMainServlet/Employees</url-pattern>
+		<servlet-name>EmployeesServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/EmployeesServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>Offices</servlet-name>
-		<url-pattern>/AdminMainServlet/Offices</url-pattern>
+		<servlet-name>OfficesServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/OfficesServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
@@ -179,8 +179,8 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>Products</servlet-name>
-		<url-pattern>/AdminMainServlet/Products</url-pattern>
+		<servlet-name>ProductsServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/ProductsServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
@@ -189,18 +189,18 @@
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>Usuarios</servlet-name>
-		<url-pattern>/AdminMainServlet/Usuarios</url-pattern>
+		<servlet-name>UsuariosServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/UsuariosServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>Orders</servlet-name>
-		<url-pattern>/AdminMainServlet/Orders</url-pattern>
+		<servlet-name>OrdersServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/OrdersServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>OrderDetails</servlet-name>
-		<url-pattern>/AdminMainServlet/OrderDetails</url-pattern>
+		<servlet-name>OrderDetailsServlet</servlet-name>
+		<url-pattern>/AdminMainServlet/OrderDetailsServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
