@@ -6,7 +6,7 @@
 
 	<div class="container mt-5">
 		<div class="row justify-content-center mt-5">
-			<div class="col-6">
+			<div class="col-8">
 				<h1 class="text-center">Formulario de registro</h1>
 				<div th:if="${usuario.user == null}">
 					<form th:action="@{/forms/registro}" th:object="${usuario}" method="post">
@@ -16,8 +16,11 @@
 	    				 <input type="password" class="form-control" id="password" placeholder="Contraseña" th:field="*{password}" required>
 	    				 <label class="mt-3" for="password2">Confirma la contraseña</label>
 	    				 <input type="password" class="form-control" id="password2" placeholder="Confirma la contraseña" required>
-	    				  <label class="mt-3" for="tipo">Tipo</label>
-	    				 <input type="text" class="form-control" id="tipo" placeholder="Estudiante..." th:field="*{tipo}" required>
+	    				 <label class="mt-3" for="tipo">Tipo</label>
+	    				 <select id="tipoSelect" th:field="*{tipo}">
+	    				 	<option value="Profesor">Profesor</option>
+	    				 	<option value="Estudiante">Estudiante</option>
+	    				 </select>
 	    				
 	    				 <button type="submit" class="btn btn-primary mt-3 w-100">ENVIAR</button>
 					</form>
