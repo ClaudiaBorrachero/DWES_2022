@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/bootstrap::head(title='Registro')">
+</head>
+<body>
+
+	<div class="container mt-5">
+		<div class="row justify-content-center mt-5">
+			<div class="col-6">
+				<h1 class="text-center">Formulario de registro</h1>
+				<div th:if="${usuario.user == null}">
+					<form th:action="@{/forms/registro}" th:object="${usuario}" method="post">
+						 <label for="usuario">Usuario</label>
+	    				 <input type="text" class="form-control" id="user" placeholder="Usuario" th:field="*{user}" required>			
+	    				 <label class="mt-3" for="password">Contraseña</label>
+	    				 <input type="password" class="form-control" id="password" placeholder="Contraseña" th:field="*{password}" required>
+	    				 <label class="mt-3" for="password2">Confirma la contraseña</label>
+	    				 <input type="password" class="form-control" id="password2" placeholder="Confirma la contraseña" required>
+	    				  <label class="mt-3" for="tipo">Tipo</label>
+	    				 <input type="text" class="form-control" id="tipo" placeholder="Estudiante..." th:field="*{tipo}" required>
+	    				
+	    				 <button type="submit" class="btn btn-primary mt-3 w-100">ENVIAR</button>
+					</form>
+				</div>	
+				<div th:unless="${usuario.user == null}">
+				<!-- <div th:if="${product.productName != null}"> -->
+					<h1>Usuario: <span th:text="${usuario.user}"></span></h1>
+					<h1>Password: <span th:text="${usuario.password}"></span></h1>
+					<h1>Tipo: <span th:text="${usuario.tipo}"></span></h1>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

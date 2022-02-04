@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/bootstrap::head(title='Sobre Nosotros')">
+</head>
+<body>
+	
+	<header th:insert="fragments/barra::nav"></header>
+		
+	<div class="container">
+		<h1 class="p-5" th:text="${contenido}"></h1>
+	</div>
+	
+	<footer th:replace="fragments/barra::footer"></footer>
+	
+</body>
+</html>
