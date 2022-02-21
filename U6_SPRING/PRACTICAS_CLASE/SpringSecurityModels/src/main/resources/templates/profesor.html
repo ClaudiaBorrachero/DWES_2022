@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="fragments/bootstrap::head(title='Profesores')"></head>
+<body>
+	<div class="container mt-5">
+		<div class="row mt-5 justify-content-center">
+			<header th:insert="fragments/parts::menu"></header>
+			<div class="col-8">
+				<h1 class="text-center">Lista de profesores</h1>
+				<table class="table table-stripped table-hover">
+					<thead class="table-light">
+						<tr>
+							<th>ID</th>
+							<th>NIF</th>
+							<th>Nombre</th>
+							<th>Apellidos</th>
+							<th>Fecha de Nacimiento</th>
+							<th>Ciudad</th>
+							<th>Sexo</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="p : ${profesor}">
+							<td th:text="${p.getId()}"></td>
+							<td th:text="${p.getNif()}"></td>
+							<td th:text="${p.getNombre()}"></td>
+							<td th:text="${p.getApellido1()} + ' ' + ${p.getApellido2()}"></td>
+							<td th:text="${p.getFechaNacimiento()}"></td>
+							<td th:text="${p.getCiudad()}"></td>
+							<td th:text="${p.getSexo()}"></td>
+							<td><a th:href="@{'/profesor/asignaturas?codigo='+${p.getId()}}"><i class="bi bi-journal-bookmark-fill"></i></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<footer th:replace="fragments/parts::footer(info='menu.teacher')"></footer>
+		</div>
+	</div>
+</body>
+</html>
