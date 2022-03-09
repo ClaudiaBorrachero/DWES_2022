@@ -30,7 +30,7 @@
 					 	<td th:text="${a.getTipo()}"></td>
 					 	<td th:text="${a.getCurso()}"></td>
 					 	<td th:text="${a.getCuatrimestre()}"></td>
-					 	<td th:text="${a.getProfesor()}"></td> 
+					 	<td th:text="(${a.profesor} != null) ? |${a.profesor.nombre} ${a.profesor.apellido1} ${a.profesor.apellido2}| : ''"><!--  th:text="${a.getProfesor()}" --></td> 
 					 	<td class="text-center"><a th:href="@{'/grados/asignaturas/delete?codigo='+${a.getId()}}"><i class="bi bi-x-square"></i></a></td>
 					 </tr>					
 					</tbody>
