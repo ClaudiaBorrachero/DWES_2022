@@ -1,0 +1,11 @@
+
+<div class="w-100" th:fragment="nav">
+	<nav class="nav nav-tabs nav-justified bg-dark">
+		<a class="nav-link text-white shadow" href="/">Inicio</a> 
+		<a class="nav-link text-white shadow" th:href="@{/profesores/}">Profesores</a>
+		<a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link text-white shadow" th:href="@{/profesores/addProfesor}">Añadir profesor</a>
+		<a sec:authorize="hasRole('ROLE_ADMIN')" class="nav-link text-white shadow" th:href="@{/profesores/addAsignatura}">Asignar Asignaturas</a>
+		<a sec:authorize="!isAuthenticated()" class="nav-link text-white shadow" th:href="@{/login}">Login</a>
+		<a class="nav-link text-white" th:href="@{/logout}"><i class="bi bi-box-arrow-left"></i></a>
+	</nav>
+</div>
